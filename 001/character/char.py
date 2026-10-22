@@ -6,10 +6,14 @@ class Character():
         self.life_points = life_points
 
     def receive_dmg(self, amount_dmg):
+        if amount_dmg <= 0:
+            return "Nada foi feito dano negativo ou igual a zero"
         
         self.life_points -= amount_dmg
 
     def heal(self, amount_heal):
+        if amount_heal <= 0:
+            return "Nada foi feito cura negativa ou igual a zero"
         
         self.life_points += amount_heal
 
